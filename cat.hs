@@ -1,6 +1,7 @@
 import System.Environment
 
-main = do
-  [f] <- getArgs
-  s   <- readFile f
-  putStr s
+main = getArgs >>= \fnames ->
+     mapM readFile fnames >>=
+     mapM_ (\(x) ->
+           putStrLn $ concat [
+           x])
