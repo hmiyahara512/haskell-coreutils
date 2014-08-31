@@ -3,6 +3,4 @@ import System.Directory
 
 main = do
   [f, g] <- getArgs
-  s      <- readFile f
-  writeFile g s
-  removeFile f
+  renameFile f g
